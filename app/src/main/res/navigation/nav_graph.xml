@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/notrfrag">
+
+    <fragment
+        android:id="@+id/notrfrag"
+        android:name="com.example.room20.notrfrag"
+        android:label="Note"
+        tools:layout="@layout/fragment_notrfrag">
+        <action
+            android:id="@+id/action_add_note"
+            app:destination="@id/add_note_frag"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/add_note_frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_note_frag"
+        android:name="com.example.room20.add_note_frag"
+        android:label="Add Note"
+        tools:layout="@layout/fragment_add_note_frag">
+        <action
+            android:id="@+id/action_back_to_note"
+            app:destination="@id/notrfrag"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/notrfrag" />
+    </fragment>
+</navigation>
